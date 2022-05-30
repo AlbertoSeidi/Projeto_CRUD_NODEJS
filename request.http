@@ -1,0 +1,10 @@
+POST http://localhost:4002/products
+content-type:application/json
+
+{
+  "name":"caderno",
+  "price":30.00
+}
+
+###
+GET http://localhost:4002/products
