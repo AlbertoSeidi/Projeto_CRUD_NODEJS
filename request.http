@@ -2,24 +2,24 @@ POST http://localhost:4002/products
 content-type:application/json
 
 {
-  "name":"Caderno 96 folhas",
-  "price":19.90
+  "name":"Pasta plastica",
+  "price":29.90
 }
 
 ###
 GET http://localhost:4002/products
 
 ###
-GET http://localhost:4002/products/4a748bd0-ce22-4ae1-91ec-b35c8dc71fb6
+GET http://localhost:4002/products/6084594c-5e7e-4d52-81c2-362e5761c32e
 
 ###
-PUT http://localhost:4002/products/21ea13c5-f08f-4369-ad35-b95814e794fb
+PUT http://localhost:4002/products/6084594c-5e7e-4d52-81c2-362e5761c32e
 content-type:application/json
 
 {
-  "name":"caneta",
-  "price":3.00
+  "name":"Borracha",
+  "price":3.50
 }
 
 ###
-DELETE http://localhost:4002/products/68a95824-1137-4d46-b24e-98eb43db4e05
+DELETE http://localhost:4002/products/3f0a7a1d-f338-4efd-9874-bad12eb411ef

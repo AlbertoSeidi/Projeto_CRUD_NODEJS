@@ -1,1 +1,12 @@
-[{"name":"borracha","price":1.5,"id":"6084594c-5e7e-4d52-81c2-362e5761c32e"},{"name":"Caderno 96 folhas","price":19.9,"id":"1d01689b-bbe2-446e-a225-4e4757cdfd83"}]
+[
+  {
+    "name": "Borracha",
+    "price": 3.5,
+    "id": "6084594c-5e7e-4d52-81c2-362e5761c32e"
+  },
+  {
+    "name": "Caderno 96 folhas",
+    "price": 19.9,
+    "id": "1d01689b-bbe2-446e-a225-4e4757cdfd83"
+  }
+]

@@ -35,14 +35,7 @@ app.post("/products", (req, res) => {
   const product = { name, price, id: randomUUID() };
 
   products.push(product);
-
-  fs.writeFile("products.json", JSON.stringify(products), (err) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("Produto inserido");
-    }
-  });
+  createWriteFile();
   return res.json(product);
 });
 
@@ -66,6 +59,7 @@ app.put("/products/:id", (req, res) => {
     name,
     price,
   };
+  createWriteFile();
   return res.json({ message: "Produto Alterado com sucesso" });
 });
 
@@ -73,8 +67,18 @@ app.delete("/products/:id", (req, res) => {
   const { id } = req.params;
   const productIndex = products.findIndex((product) => product.id === id);
   products.splice(productIndex, 1);
-
+  createWriteFile();
   return res.json({ message: "Produto removido com sucesso" });
 });
+
+function createWriteFile() {
+  fs.writeFile("products.json", JSON.stringify(products), (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Produto inserido");
+    }
+  });
+}
 
 app.listen(4002, () => console.log("Servidor esta rodando na porta 4002..."));
