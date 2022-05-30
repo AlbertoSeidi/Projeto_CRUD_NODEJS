@@ -2,9 +2,24 @@ POST http://localhost:4002/products
 content-type:application/json
 
 {
-  "name":"caderno",
-  "price":30.00
+  "name":"Caderno 96 folhas",
+  "price":19.90
 }
 
 ###
 GET http://localhost:4002/products
+
+###
+GET http://localhost:4002/products/4a748bd0-ce22-4ae1-91ec-b35c8dc71fb6
+
+###
+PUT http://localhost:4002/products/21ea13c5-f08f-4369-ad35-b95814e794fb
+content-type:application/json
+
+{
+  "name":"caneta",
+  "price":3.00
+}
+
+###
+DELETE http://localhost:4002/products/68a95824-1137-4d46-b24e-98eb43db4e05
